@@ -32,7 +32,8 @@
         </p>
 
         <p>
-            <input type="submit" value="Save" ng-disabled="contactForm.$invalid">
+            <input type="submit" value="Save"   ng-disabled="contactForm.$invalid" 
+                                                ng-click="contactDetailController.contactUpdate()">
         </p>
     </form>
 </div>

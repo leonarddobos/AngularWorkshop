@@ -2,10 +2,19 @@
     <h1>
         Contacts
     </h1>
+
+    <button ui-sref="app.contactDetail">New Contact</button>
+
     <p class="search-box">
         <input type="text" placeholder="Search..." ng-model="search" />
     </p>
     <ul ng-repeat="contact in contactListController.contacts | filter:search">
-        <li><a ui-sref="app.contactDetail({name:contact})">{{ contact |capitalize }}</a></li>
+        <li>
+        	<p> Nome: {{ contact.first_name}} </p>
+        	<p> Cognome: {{contact.last_name}} </p>
+        	<p>	Email: {{ contact.email}}</p>
+        	<p><button ui-sref="app.contactDetail({id:contact.id})"> Edit </button></p>
+
+        </li>
     </ul>
 </div>
