@@ -1,0 +1,11 @@
+<h1>Contacts</h1>
+
+<p><span>Name: </span><input type="text" name="searchText" ng-model="searchText"></p>
+
+<p>Hi {{insertName}}</p>
+
+<ul id="searchTextResults" ng-repeat="contact in ctrl.contacts | filter:searchText ">
+
+	<li> <a ui-sref="app.form({name:contact})"> {{contact |  capitalize}} </a></li>
+
+</ul>
